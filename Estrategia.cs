@@ -42,8 +42,17 @@ namespace tpfinal
 
         public String Consulta2(List<Proceso> datos)
         {
-            string resutl = "Implementar";
+            string resutl = "Las alturas de las Heaps son:\n\n";
+            MinHeap minHeap = new MinHeap(datos.Count);
+            MaxHeap maxHeap = new MaxHeap(datos.Count);
+            foreach(Proceso dato in datos) {
+                minHeap.Insert(dato);
+                maxHeap.Insert(dato);
+            }
 
+            resutl += "MinHeap:" + minHeap.Height();
+            resutl += "\n";
+            resutl += "MaxHeap: " + maxHeap.Height();
             return resutl;
         }
 
