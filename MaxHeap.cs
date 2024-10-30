@@ -7,6 +7,7 @@ namespace tpfinal {
             arreglo = new Proceso[tam + 1];
             this.tam = 0;
         }
+        
         public MaxHeap(List<Proceso> datos) {
             arreglo = new Proceso[datos.Count + 1];
             this.tam = 0;
