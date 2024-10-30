@@ -7,6 +7,14 @@ namespace tpfinal {
             arreglo = new Proceso[tam + 1];
             this.tam = 0;
         }
+        public MaxHeap(List<Proceso> datos) {
+            arreglo = new Proceso[datos.Count + 1];
+            this.tam = 0;
+
+            foreach(Proceso dato in datos) {
+                Insert(dato);
+            }
+        }
 
         internal void swap(int idx1, int idx2) {
             Proceso aux = this.arreglo[idx1];
@@ -79,6 +87,10 @@ namespace tpfinal {
         public Proceso[] GetHojas() {
             int h = (int)System.Math.Pow(2,Height()-1);
             return arreglo[h..(tam + 1)];
+        }
+
+        public Proceso[] GetNivel(int nivel) {
+            return arreglo[nivel..(int)System.Math.Pow(2,nivel)];
         }
     }
 }
