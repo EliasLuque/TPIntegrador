@@ -73,7 +73,7 @@ namespace tpfinal {
             return aux;
         }
 
-        public int Lenght() {
+        public int Length() {
             return tam;
         }
         

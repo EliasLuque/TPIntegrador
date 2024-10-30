@@ -100,7 +100,7 @@ namespace tpfinal
                 heap.Insert(dato);
             }
 
-            while(heap.Lenght() != 0) {
+            while(heap.Length() != 0) {
                 collected.Add(heap.DeleteMin());
             }
         }
@@ -114,7 +114,7 @@ namespace tpfinal
                 heap.Insert(dato);
             }
 
-            while(heap.Lenght() != 0) {
+            while(heap.Length() != 0) {
                 collected.Add(heap.DeleteMax());
             }
         }
