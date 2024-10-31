@@ -3,12 +3,13 @@ namespace tpfinal {
         private Proceso[] arreglo;
         private int tam;
 
-        public MinHeap(int tam) {
+        // Tiene el tamaño de la Heap como argumento
+        public MinHeap(int tam) { 
             arreglo = new Proceso[tam + 1];
             this.tam = 0;
         }
-
-        public MinHeap(List<Proceso> datos) {
+        // Tiene la lista de datos como argumento
+        public MinHeap(List<Proceso> datos) { 
             arreglo = new Proceso[datos.Count + 1];
             this.tam = 0;
 
